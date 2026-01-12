@@ -1,5 +1,5 @@
 import api from '../lib/axios';
-import { ArrowLeftIcon } from 'lucide-react';
+import { ArrowLeftIcon, LoaderIcon } from 'lucide-react';
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router';
@@ -43,6 +43,15 @@ const CreatePage = () => {
       setLoading(false)
     }
   }
+
+  if (loading) {
+      return(
+        <div className='min-h-screen bg-base-200 flex items-center justify-center'>
+          <LoaderIcon className='animate-spin size-20' />
+        </div>
+      )
+    }
+
   return (
     <div className='min-h-screen bg-base-200'>
       <div className='container mx-auto px-4 py-8'>

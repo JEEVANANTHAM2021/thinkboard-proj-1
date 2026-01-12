@@ -5,6 +5,7 @@ import toast from 'react-hot-toast'
 import NoteCard from '../components/NoteCard';
 import NotesNotFound from '../components/NotesNotFound';
 import api from '../lib/axios';
+import { LoaderIcon } from 'lucide-react';
 
 const HomePage = () => {
  const [isRateLimited, setIsRateLimited ] = useState(false);
@@ -33,6 +34,15 @@ const HomePage = () => {
 
   fetchNotes();
  }, [])
+
+ if (loading) {
+       return(
+         <div className='min-h-screen bg-base-200 flex items-center justify-center'>
+           <LoaderIcon className='animate-spin size-20' />
+         </div>
+       )
+     }
+
   return (
     <div className='min-h-screen'>
       <Navbar />
