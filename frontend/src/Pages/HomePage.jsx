@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { LoaderIcon } from 'lucide-react';
+
 import Navbar from '../components/Navbar'
 import RateLimitedUi from '../components/RateLimitedUi';
 import toast from 'react-hot-toast'
 import NoteCard from '../components/NoteCard';
 import NotesNotFound from '../components/NotesNotFound';
 import api from '../lib/axios';
-import { LoaderIcon } from 'lucide-react';
+
 
 const HomePage = () => {
  const [isRateLimited, setIsRateLimited ] = useState(false);

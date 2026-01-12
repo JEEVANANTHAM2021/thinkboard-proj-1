@@ -1,7 +1,8 @@
-import api from '../lib/axios';
-import { ArrowLeftIcon, LoaderIcon } from 'lucide-react';
 import React, { useState } from 'react'
+import api from '../lib/axios';
 import toast from 'react-hot-toast';
+
+import { ArrowLeftIcon, LoaderIcon } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
 
 
